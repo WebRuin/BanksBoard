@@ -1,0 +1,47 @@
+/*
+ * CSS Animations
+ * Don't forget to add vendor prefixes!
+ */
+.m-scene .scene_element {
+  width: 250vw;
+  height: 100vh;
+
+  position: absolute;
+  z-index: 30;
+  top: 0;
+  left: -150vw;
+  opacity: 1;
+
+  /*background: rgb(30,87,153); /* Old browsers */
+  /*background: -moz-linear-gradient(left,  rgba(30,87,153,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 82%, rgba(255,255,255,1) 100%); /* FF3.6-15 */*/
+  /*background: -webkit-linear-gradient(left,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 82%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */*/
+  /*background: linear-gradient(to right,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 82%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */*/
+  /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */*/*/
+
+  -ms-transform: skewX(-20deg); /* IE 9 */
+  -webkit-transform: skewX(-20deg); /* Safari */
+  transform: skewX(-20deg); /* Standard syntax */
+  animation-duration: 4s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
+  background: url('images/wave-min.png');
+  background-size: 250vw;
+  z-index: 9999;
+}
+
+.m-scene .scene_element--fadein{
+  animation-name: fadeIn;
+}
+
+.m-scene.is-exiting .scene_element {
+  animation-direction: alternate-reverse;
+}
+
+/*
+ * Keyframes
+ */
+@keyframes fadeIn {
+  0%   { display: block; left: -210vw; opacity: 1}
+  /*80%  { opacity: 0.5; }*/
+  100% { opacity: 0; left: 210vw; }
+}

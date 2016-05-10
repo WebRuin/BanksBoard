@@ -1,0 +1,24 @@
+.main-header {
+  position: relative;
+  top: 2em;
+  height: 70vh;
+  overflow: hidden;
+
+  .main-header-image {
+      position: absolute;
+      top: -35vh;
+      width: 100vw;
+      height: 105vh;
+      background: #000;
+      background-image: url(images/wave-1.gif);
+      background-size: cover;
+  }
+}
+
+.logo-image {
+  display: inline-block;
+  height: 60px;
+  width: 172px;
+  background-image: url(images/logo-old.jpg);
+  background-size: contain;
+}
